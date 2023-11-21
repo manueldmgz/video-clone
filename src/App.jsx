@@ -1,43 +1,41 @@
-import { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Comentario from "./components/Comentario/Comentario";
+import ComentarioDefault from "./components/ComentarioDefault/Default"
 
 const App = () => {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Vite + React</h1>
-        <p>
-          <button onClick={() => setCount(count => count + 1)}>
-            count is {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://react.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <header className="App-header">LECHUGA VIDEOS</header>
+      <container className="container">
+        <main className="container__main">
+          <p className="titulo__video">Ser o no ser una lechuga</p>
+          <iframe
+            width="80%"
+            height="315"
+            src="https://www.youtube.com/embed/SU8VAhxpsKI?si=mXu6KBCM564Rk5UO"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p className="titulo__likes">
+            <button onClick={() => {
+              setCount(e => e +1);
+            }} className="btn__likes">
+            <img src="../img/heart.png" className="img__corazon"></img>
+            </button>
+            Likes: {count}
+          </p>
+        </main>
+        <section className="container__coments">
+          <p className="titulo__comentarios">Comentarios</p>
+          <Comentario />
+          <ComentarioDefault />
+        </section>
+      </container>
     </div>
   );
 };
