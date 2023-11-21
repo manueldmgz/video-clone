@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/video-clone",
-  test: {
+  base: "/video-clone/",
+  tesnpt: {
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.js'],
