@@ -1,7 +1,9 @@
 {
   "name": "lechuga-videos",
+  "private": true,
   "version": "1.4.0",
   "homepage": "https://manueldmgz.github.io/video-clone",
+  "type" : "module",
   "scripts": {
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d dist",
