@@ -2,7 +2,7 @@
   "name": "lechuga-videos",
   "private": true,
   "version": "1.4.0",
-  "homepage": "https://manueldmgz.github.io/youtube-clone",
+  "homepage": "https://manueldmgz.github.io/video-clone",
   "type" : "module",
   "scripts": {
     "predeploy" : "npm run build",
